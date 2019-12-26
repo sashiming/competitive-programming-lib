@@ -3,8 +3,8 @@ struct SegmentTree{
 private:
   int n, OUT; vector<int> node;
 public:
-  SegmentTree(vector<int> vec, int &OUT){
-    int siz = vec.size();
+  SegmentTree(vector<int> vec, int &out){
+    int siz = vec.size(); OUT = out;
     n = 1; while(n < siz) n <<= 1;
     node.resize(n*2-1, OUT);
     REP(i, siz) node[n-1+i] = vec[i];
