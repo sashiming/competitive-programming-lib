@@ -3,10 +3,9 @@ struct BIT{
 private:
   int N; vector<int> bit;
 public:
-  BIT(vector<int> vec){
-    N = vec.size();
+  BIT(int size){
+    N = size;
     bit.assign(N+1, 0);
-    copy(vec.begin(), vec.end(), bit.begin()+1);
   }
   void add(int a, int w){
     for(int x = a; x <= N; x += x & -x)
