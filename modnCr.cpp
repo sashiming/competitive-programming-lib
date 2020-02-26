@@ -31,15 +31,15 @@ int invmod(int a, int p){ // a^-1 mod p
 }
 
 void factmod(int m){
-	fact[0] = revfact[0] = 1;
+	fact[0] = invfact[0] = 1;
 	for(int i = 1; i < 500000; i++){
 		fact[i] = (fact[i-1] * i) % m;
-		revfact[i] = (revfact[i-1] * invmod(i, m)) % m;
+		invfact[i] = (invfact[i-1] * invmod(i, m)) % m;
 	}
 }
 
 int nCrmod(int n, int r, int m){
-	return (((fact[n] * revfact[r]) % m) * revfact[n-r]) % m;
+	return (((fact[n] * invfact[r]) % m) * invfact[n-r]) % m;
 }
 
 /*****/
