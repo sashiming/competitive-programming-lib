@@ -14,15 +14,16 @@ using namespace std;
 #define uset unordered_set
 #define BIG 2000000000
 #define VERYBIG 1000000000000000ll
-#define PI 3.141592653589793238
-#define dcout cout<<fixed<<setprecision(50)
+#define dcout cout<<fixed<<setprecision(20)
+#define Accepted_MAGIC cin.tie(0);ios::sync_with_stdio(false);cerr << "compiled" << endl
+
+// typedef long long ll;
+using Real = long double;
+#define int long long
 
 const long long dx[]={1,0,-1,0,1,1,-1,-1}, dy[]={0,-1,0,1,1,-1,1,-1};
 const long long MOD = 1e9+7;
-
-// typedef long long ll;
-#define int long long
-#define double long double
+constexpr Real eps = 1e-9, pi = acos(-1);
 
 template<typename T> inline T GCD(T a,T b){T c;while(b!=0){c=a%b;a=b;b=c;}return a;}
 template<typename T> inline T LCM(T a,T b){T c=GCD(a,b);a/=c;return a*b;}
@@ -35,3 +36,8 @@ typedef pair<int, int> INTP;
 typedef vector<int> INTV;
 struct edge2 {int to, cost;};
 struct edge3 {int from, to, cost;};
+
+signed main(void){
+  Accepted_MAGIC;
+  
+}
