@@ -1,16 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// int powmod(int a, int p, int m){
-// 	int res = 1, tmp = a;
-// 	while(p != 0){
-// 		if(p % 2)
-// 			res = (res*tmp) % m;
-// 		tmp = (tmp*tmp) % m;
-// 		p /= 2;
-// 	}
-// 	return res;
-// }
+int powmod(int a, int p, int m){
+	int res = 1, tmp = a;
+	while(p != 0){
+		if(p % 2)
+			res = (res*tmp) % m;
+		tmp = (tmp*tmp) % m;
+		p /= 2;
+	}
+	return res;
+}
 
 /*****/
 #define int long long
