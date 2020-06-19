@@ -1,18 +1,17 @@
-template<long long mod>
 struct mint {
 	long long num;
-	mint(long long a = 0) : num((a%+mod)%mod){}
+	mint(long long a = 0) : num((a%+MOD)%MOD){}
 	mint operator-() const { return mint(-num); }
 	mint &operator+= (const mint &a) {
-		if((num += a.num) >= mod) num -= mod;
+		if((num += a.num) >= MOD) num -= MOD;
 		return *this;
 	}
 	mint &operator-= (const mint &a) {
-		if((num += mod-a.num) >= mod) num -= mod;
+		if((num += mod-a.num) >= MOD) num -= MOD;
 		return *this;
 	}
 	mint &operator*= (const mint &a) {
-		(num *= a.num) %= mod;
+		(num *= a.num) %= MOD;
 		return *this;
 	}
 	mint operator+ (const mint &a) const { return mint(*this) += a; }
@@ -34,7 +33,7 @@ struct mint {
 
 	// for prime mod	
 	mint inverse() const {
-		long long a = num, b = mod, u = 1, v = 0, t;
+		long long a = num, b = MOD, u = 1, v = 0, t;
 		while(b > 0){
 			t = a/b;
 			swap(a -= t*b, b);
